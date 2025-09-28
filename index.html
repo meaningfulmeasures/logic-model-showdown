@@ -40,13 +40,13 @@
                 <h1 class="app-title">Logic Model Showdown</h1>
                 <p class="app-subtitle">Master Logic Models Through Play!</p>
             </div>
-            
-                <div class="sound-controls">
-                  <label for="volume-slider" class="volume-label">🔊</label>
-                  <input type="range" id="volume-slider" class="volume-slider" min="0" max="100" value="70">
-                  <audio id="bgMusic" src="bg.mp3" loop></audio>
-                  <button id="playPauseBtn">Play</button>
-                </div>
+           <div class="sound-controls">
+                <label for="volume-slider" class="volume-label">🔊</label>
+                <input type="range" id="volume-slider" class="volume-slider" min="0" max="100" value="70">
+                    <audio id="bgMusic" src="bg.mp3" loop></audio>
+                    <button onclick="document.getElementById('bgMusic').play()">Play Background Music</button>
+                   <button onclick="document.getElementById('bgMusic').pause()">Pause Background Music</button>
+            </div>
 
         </header>
 
