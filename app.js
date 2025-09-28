@@ -5,7 +5,7 @@ class LogicModelGame {
         this.scenarios = [
             {
                 name: "Launch a sock puppet revolution",
-                image: "https://user-gen-media-assets.s3.amazonaws.com/seedream_images/05376b42-34e5-443e-9b3b-f05db74bf62f.png",
+                image: "https://raw.githubusercontent.com/meaningfulmeasures/logic-model-showdown/main/images/Sock.png",
                 items: [
                     {"text": "Rebel sock puppets", "icon": "🧦", "correctCategory": "inputs"},
                     {"text": "Puppet stage materials", "icon": "🎭", "correctCategory": "inputs"},
@@ -24,7 +24,7 @@ class LogicModelGame {
             },
             {
                 name: "Start a city-wide hamster parade",
-                image: "https://user-gen-media-assets.s3.amazonaws.com/seedream_images/e865e10f-5c1a-453e-90b7-e99cc7fe0317.png",
+                image: "https://raw.githubusercontent.com/meaningfulmeasures/logic-model-showdown/main/images/Hamster.png",
                 items: [
                     {"text": "500 trained hamsters", "icon": "🐹", "correctCategory": "inputs"},
                     {"text": "Tiny top hats", "icon": "🎩", "correctCategory": "inputs"},
@@ -43,7 +43,7 @@ class LogicModelGame {
             },
             {
                 name: "Clean the moon for space tourists",
-                image: "https://user-gen-media-assets.s3.amazonaws.com/seedream_images/3cfc5099-dd04-4cbf-a830-126b4ec2a621.png",
+                image: "https://raw.githubusercontent.com/meaningfulmeasures/logic-model-showdown/main/images/Moon.png",
                 items: [
                     {"text": "Space-grade mops", "icon": "🧽", "correctCategory": "inputs"},
                     {"text": "Lunar cleaning solution", "icon": "🧴", "correctCategory": "inputs"},
@@ -62,7 +62,7 @@ class LogicModelGame {
             },
             {
                 name: "Build luxury treehouses for penguins",
-                image: "https://user-gen-media-assets.s3.amazonaws.com/seedream_images/399a9fcb-18cb-4bd0-95f0-9c1905ec5c55.png",
+                image: "https://raw.githubusercontent.com/meaningfulmeasures/logic-model-showdown/main/images/Penguin.png",
                 items: [
                     {"text": "Arctic-grade lumber", "icon": "🪵", "correctCategory": "inputs"},
                     {"text": "Penguin translators", "icon": "🐧", "correctCategory": "inputs"},
@@ -81,7 +81,7 @@ class LogicModelGame {
             },
             {
                 name: "Invent edible homework for students",
-                image: "https://user-gen-media-assets.s3.amazonaws.com/seedream_images/0fb3d8b0-521a-432d-acba-dc67b7474b62.png",
+                image: "https://raw.githubusercontent.com/meaningfulmeasures/logic-model-showdown/main/images/Student.png",
                 items: [
                     {"text": "Food-grade ink", "icon": "🖋️", "correctCategory": "inputs"},
                     {"text": "Edible paper materials", "icon": "📄", "correctCategory": "inputs"},
@@ -100,7 +100,7 @@ class LogicModelGame {
             },
             {
                 name: "Create a time machine using kitchen appliances",
-                image: "https://user-gen-media-assets.s3.amazonaws.com/seedream_images/06304de1-840a-491d-83b8-e3e2ba1b395c.png",
+                image: "https://raw.githubusercontent.com/meaningfulmeasures/logic-model-showdown/main/images/Kitchen.png",
                 items: [
                     {"text": "Modified toaster", "icon": "🍞", "correctCategory": "inputs"},
                     {"text": "Microwave capacitors", "icon": "🔌", "correctCategory": "inputs"},
@@ -119,7 +119,7 @@ class LogicModelGame {
             },
             {
                 name: "Establish an underwater library for fish",
-                image: "https://user-gen-media-assets.s3.amazonaws.com/seedream_images/4750fcde-1326-441b-9f9a-94d864c84b55.png",
+                image: "https://raw.githubusercontent.com/meaningfulmeasures/logic-model-showdown/main/images/Fish.png",
                 items: [
                     {"text": "Waterproof books", "icon": "📚", "correctCategory": "inputs"},
                     {"text": "Coral shelves", "icon": "🏖️", "correctCategory": "inputs"},
@@ -138,7 +138,7 @@ class LogicModelGame {
             },
             {
                 name: "Train cats to deliver mail",
-                image: "https://user-gen-media-assets.s3.amazonaws.com/seedream_images/36dc6abb-83c3-44e1-b98f-961e7b531490.png",
+                image: "https://raw.githubusercontent.com/meaningfulmeasures/logic-model-showdown/main/images/Cat.png",
                 items: [
                     {"text": "Cat training treats", "icon": "🐱", "correctCategory": "inputs"},
                     {"text": "Letter satchels", "icon": "📬", "correctCategory": "inputs"},
@@ -157,7 +157,7 @@ class LogicModelGame {
             },
             {
                 name: "Open a restaurant for robots",
-                image: "https://user-gen-media-assets.s3.amazonaws.com/seedream_images/d9500ca2-e77b-407a-b472-0eba6a876424.png",
+                image: "https://raw.githubusercontent.com/meaningfulmeasures/logic-model-showdown/main/images/Robot.png",
                 items: [
                     {"text": "Aluminium plates", "icon": "🍽️", "correctCategory": "inputs"},
                     {"text": "Robot chefs", "icon": "🤖", "correctCategory": "inputs"},
@@ -176,7 +176,7 @@ class LogicModelGame {
             },
             {
                 name: "Start a dance school for vegetables",
-                image: "https://user-gen-media-assets.s3.amazonaws.com/seedream_images/fab3d966-f951-4201-8433-f9c133c36393.png",
+                image: "https://raw.githubusercontent.com/meaningfulmeasures/logic-model-showdown/main/images/Vege.png",
                 items: [
                     {"text": "Vegetable dancing shoes", "icon": "🥕", "correctCategory": "inputs"},
                     {"text": "Broccoli ballet teachers", "icon": "🥦", "correctCategory": "inputs"},
