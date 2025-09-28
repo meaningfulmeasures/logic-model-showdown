@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Model Showdown - Learn Logic Models Through Play | Meaningful Measures Lab</title>
+    <meta name="description" content="Master logic models through an engaging, interactive game. Learn the difference between outputs and outcomes while building complete logic models.">
+    <meta name="keywords" content="logic model, evaluation, program theory, outcomes, outputs, educational game">
+    <meta property="og:title" content="Logic Model Showdown - Interactive Logic Model Learning Game">
+    <meta property="og:description" content="Learn logic models through play! Master the difference between outputs and outcomes in this engaging educational game.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header with Dual Logo System -->
+        <header class="header">
+            <a href="https://meaningful-measures.super.site/" target="_blank" class="meaningful-measures-logo" rel="noopener">
+                <img src="image.jpeg" alt="Meaningful Measures Lab" class="mm-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="mm-logo-fallback">
+                    <div class="mm-logo-icon">📊</div>
+                    <div class="mm-logo-text">
+                        <div class="mm-logo-name">Meaningful</div>
+                        <div class="mm-logo-sub">Measures</div>
+                    </div>
+                </div>
+            </a>
+            
+            <div class="main-logo">
+                <div class="isometric-logo-container">
+                    <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/6365a842-fa6d-40b1-a7da-c093815bdeef.png" 
+                         alt="Logic Model Showdown - Adorable Isometric Logo" 
+                         class="isometric-logo"
+                         onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='block';">
+                    <div class="logo-fallback" style="display: none;">
+                        <div class="fallback-logo">🎯</div>
+                    </div>
+                </div>
+                <h1 class="app-title">Logic Model Showdown</h1>
+                <p class="app-subtitle">Master Logic Models Through Play!</p>
+            </div>
+            
+            <div class="sound-controls">
+                <label for="volume-slider" class="volume-label">🔊</label>
+                <input type="range" id="volume-slider" class="volume-slider" min="0" max="100" value="70">
+            </div>
+        </header>
+
+        <!-- Instructions Section -->
+        <section class="instructions-section">
+            <div class="instructions-card">
+                <h2 class="instructions-title">📚 How to Play - Read This First!</h2>
+                <div class="instructions-content">
+                    <p class="goal-text"><strong>Goal:</strong> Build a complete logic model by tapping items and placing them in the correct slots!</p>
+                    <div class="steps-grid">
+                        <div class="step">
+                            <span class="step-number">1</span>
+                            <p>Tap an item to select it (it will glow)</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <p>Tap the correct logic slot to place it</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <p>Follow the flow: Inputs → Activities → Outputs → Outcomes → Impact</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">4</span>
+                            <p>Learn from feedback and explore all 10 scenarios!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Section -->
+        <main class="game-container">
+            <!-- Scenario Display with Enhanced Image Features -->
+            <div class="scenario-section">
+                <h2 class="scenario-title">Current Mission:</h2>
+                <div class="scenario-card">
+                    <div class="scenario-image-container">
+                        <img id="scenario-image" src="" alt="Scenario illustration" class="scenario-image">
+                        <div class="image-controls">
+                            <button id="zoom-in" class="image-btn" title="Zoom In">🔍+</button>
+                            <button id="zoom-out" class="image-btn" title="Zoom Out">🔍-</button>
+                            <button id="reset-zoom" class="image-btn" title="Reset Zoom">↻</button>
+                            <button id="share-image" class="image-btn" title="Share Image">📤</button>
+                        </div>
+                    </div>
+                    <h3 id="scenario-name" class="scenario-name">Loading...</h3>
+                </div>
+                <div class="scenario-controls">
+                    <button id="next-scenario" class="btn btn--primary scenario-btn">🎲 New Mission</button>
+                    <button id="share-btn" class="btn btn--secondary scenario-btn">📱 Share Success</button>
+                </div>
+            </div>
+
+            <!-- Game Board -->
+            <div class="game-board">
+                <!-- Logic Model Slots (Left Column) -->
+                <div class="logic-slots">
+                    <h3 class="slots-title">🎯 Logic Model Builder</h3>
+                    
+                    <div class="logic-slot" data-category="inputs">
+                        <h4 class="slot-title">📥 Inputs</h4>
+                        <p class="slot-description">Resources needed (people, money, materials)</p>
+                        <div class="slot-items" id="inputs-slot"></div>
+                    </div>
+
+                    <div class="logic-slot" data-category="activities">
+                        <h4 class="slot-title">⚡ Activities</h4>
+                        <p class="slot-description">Actions and processes you do</p>
+                        <div class="slot-items" id="activities-slot"></div>
+                    </div>
+
+                    <div class="logic-slot" data-category="outputs">
+                        <h4 class="slot-title">📊 Outputs</h4>
+                        <p class="slot-description">Direct products of activities (what you produce)</p>
+                        <div class="slot-items" id="outputs-slot"></div>
+                    </div>
+
+                    <div class="logic-slot" data-category="outcomes">
+                        <h4 class="slot-title">🌟 Outcomes</h4>
+                        <p class="slot-description">Changes in people/situations (what happens as a result)</p>
+                        <div class="slot-items" id="outcomes-slot"></div>
+                    </div>
+
+                    <div class="logic-slot" data-category="impact">
+                        <h4 class="slot-title">🚀 Impact</h4>
+                        <p class="slot-description">Long-term, broader changes</p>
+                        <div class="slot-items" id="impact-slot"></div>
+                    </div>
+                </div>
+
+                <!-- Item Pool (Right Column) -->
+                <div class="item-pool">
+                    <h3 class="pool-title">🎒 Available Items</h3>
+                    <p class="pool-instruction">Tap items to select, then tap the correct slot!</p>
+                    <div id="item-container" class="items-grid"></div>
+                </div>
+            </div>
+
+            <!-- Progress and Achievements -->
+            <div class="progress-section">
+                <div class="score-display">
+                    <span class="score-label">Score:</span>
+                    <span id="current-score" class="score-value">0</span>
+                </div>
+                <div class="achievements-display">
+                    <h4 class="achievements-title">🏆 Achievements</h4>
+                    <div id="achievements-list" class="achievements-list"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer Attribution -->
+        <footer class="footer">
+            <p class="attribution">
+                Created by <a href="https://meaningful-measures.super.site/" target="_blank" class="attribution-link" rel="noopener">Meaningful Measures Lab</a>
+                | Building better evaluation practices through engaging learning
+            </p>
+        </footer>
+
+        <!-- Feedback Modal -->
+        <div id="feedback-modal" class="modal hidden">
+            <div class="modal-content">
+                <h3 id="feedback-title" class="feedback-title">Great Job! ✨</h3>
+                <p id="feedback-text" class="feedback-text">You're learning!</p>
+                <div class="modal-actions">
+                    <button id="close-modal" class="btn btn--primary">Continue Playing 🎯</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Completion Modal -->
+        <div id="completion-modal" class="modal hidden">
+            <div class="modal-content completion-content">
+                <canvas id="confetti-canvas"></canvas>
+                <h2 class="completion-title">🎉 Mission Complete! 🎉</h2>
+                <p class="completion-text">You've mastered this logic model scenario!</p>
+                <div class="completion-stats">
+                    <div class="stat">
+                        <span class="stat-label">Final Score:</span>
+                        <span id="final-score" class="stat-value">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Achievements Unlocked:</span>
+                        <span id="achievements-count" class="stat-value">0</span>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button id="new-mission" class="btn btn--primary">🎲 New Mission</button>
+                    <button id="share-complete" class="btn btn--secondary">📱 Share Success</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Share Modal -->
+        <div id="share-modal" class="modal hidden">
+            <div class="modal-content">
+                <h3 class="share-title">📱 Share Your Success!</h3>
+                <div class="share-preview">
+                    <p class="share-text">🎯 I just mastered a logic model in Logic Model Showdown! 
+                    Check out this engaging way to learn evaluation fundamentals.</p>
+                    <p class="share-attribution">Created by Meaningful Measures Lab</p>
+                </div>
+                <div class="share-buttons">
+                    <button id="copy-share" class="btn btn--primary">📋 Copy Link</button>
+                    <button id="close-share" class="btn btn--secondary">Close</button>
+                </div>
+                <div id="copy-feedback" class="copy-feedback hidden">✅ Copied to clipboard!</div>
+            </div>
+        </div>
+
+        <!-- Image Share Modal -->
+        <div id="image-share-modal" class="modal hidden">
+            <div class="modal-content">
+                <h3 class="share-title">📸 Share This Amazing Scenario Image!</h3>
+                <div class="share-preview">
+                    <div class="shared-image-preview">
+                        <img id="shared-image-preview" src="" alt="Shared scenario" class="shared-image">
+                    </div>
+                    <p class="share-text">Look at this delightful scenario from Logic Model Showdown! 
+                    These adorable isometric illustrations make learning logic models so much fun.</p>
+                    <p class="share-attribution">Created by Meaningful Measures Lab</p>
+                </div>
+                <div class="share-buttons">
+                    <button id="copy-image-share" class="btn btn--primary">📋 Copy Image Link</button>
+                    <button id="download-image" class="btn btn--secondary">💾 Download</button>
+                    <button id="close-image-share" class="btn btn--secondary">Close</button>
+                </div>
+                <div id="image-copy-feedback" class="copy-feedback hidden">✅ Link copied to clipboard!</div>
+            </div>
+        </div>
+
+        <!-- Image Zoom Modal -->
+        <div id="zoom-modal" class="modal hidden zoom-modal">
+            <div class="zoom-modal-content">
+                <div class="zoom-modal-header">
+                    <h3 id="zoom-modal-title" class="zoom-modal-title">Scenario Image</h3>
+                    <button id="close-zoom" class="close-zoom-btn">✕</button>
+                </div>
+                <div class="zoom-image-container">
+                    <img id="zoom-image" src="" alt="Zoomed scenario" class="zoom-image">
+                </div>
+                <div class="zoom-controls">
+                    <button id="zoom-in-modal" class="zoom-control-btn">🔍+ Zoom In</button>
+                    <button id="zoom-out-modal" class="zoom-control-btn">🔍- Zoom Out</button>
+                    <button id="reset-zoom-modal" class="zoom-control-btn">↻ Reset</button>
+                    <button id="share-zoom-image" class="zoom-control-btn">📤 Share</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
